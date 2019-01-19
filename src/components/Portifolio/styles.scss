@@ -1,0 +1,15 @@
+.portifolio {
+  background-color: red;
+  height: 100vh;
+  display: flex;
+
+  &__user-info {
+    background-color: #333;
+    flex: 0 0 30%;
+  }
+
+  &__user-history {
+    background-color: #fff;
+    flex: 0 0 70%;
+  }
+}
