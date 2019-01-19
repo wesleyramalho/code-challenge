@@ -51,7 +51,6 @@ export default class App extends Component {
 
   render() {
     const { profile } = this.state;
-
     if (this.isLoading()) {
       return <div>Carregando</div>;
     } else if (this.hasErrorWhileLoading()) {
