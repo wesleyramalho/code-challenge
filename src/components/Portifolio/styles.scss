@@ -1,15 +1,101 @@
 .portifolio {
-  background-color: red;
   height: 100vh;
+  width: 100vw;
   display: flex;
 
   &__user-info {
     background-color: #333;
-    flex: 0 0 25%;
+    flex: 0 0 35%;
+    // padding: 3rem;
   }
 
   &__user-history {
     background-color: #fff;
-    flex: 0 0 75%;
+    flex: 1;
+  }
+
+  .user-presentation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    // height: 100%;
+    margin: 0 auto;
+    padding: 3rem;
+
+
+    &__photo-container {
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      transform: rotate(45deg);
+      outline: solid;
+      outline-offset: -25px;
+      outline-color: #cfcfcf;
+      outline-width: thin;
+    }
+    &__photo-container::before {
+      content: "";
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      background-image: url("../../assets/img/avatar-dev.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: rotate(-45deg);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    &__name {
+      text-transform: uppercase;
+      color: #fefefe;
+      font-size: 4rem;
+      letter-spacing: 0.6rem;
+      font-weight: 600;
+      word-spacing: 100vw;
+      text-align: center;
+    }
+
+    &__profession {
+      position: relative;
+      text-transform: uppercase;
+      color: #d4d4d4;
+      font-size: 1rem;
+      font-weight: 100;
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: 0.10em solid #fff; /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 1.2rem auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: 0.20em; /* Adjust as needed */
+      animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 45%;
+      }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: #fff;
+      }
+    }
+  }
+
+  .line-separation {
+    margin-left: 1.2rem;
   }
 }
