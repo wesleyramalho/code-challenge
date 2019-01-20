@@ -5,13 +5,12 @@
 
   &__user-info {
     background-color: #333;
-    flex: 0 0 35%;
-    // padding: 3rem;
+    flex: 0 0 35%; //don't grow - don't shrink - starts with 35% of available space
   }
 
   &__user-history {
     background-color: #fff;
-    flex: 1;
+    flex: 1; //fill all space available
   }
 
   .user-presentation {
@@ -20,20 +19,20 @@
     flex-direction: column;
     align-items: center;
     background-color: transparent;
-    // height: 100%;
     margin: 0 auto;
     padding: 3rem;
 
 
+    //outline around the photo
     &__photo-container {
       margin-top: 1rem;
       margin-bottom: 3rem;
       width: 200px;
       height: 200px;
       overflow: hidden;
-      transform: rotate(45deg);
+      transform: rotate(45deg); //rotate the div with the outline
       outline: solid;
-      outline-offset: -25px;
+      outline-offset: -25px; //distance between the photo and the outline
       outline-color: #cfcfcf;
       outline-width: thin;
     }
@@ -45,8 +44,8 @@
       background-image: url("../../assets/img/avatar-dev.png");
       background-repeat: no-repeat;
       background-size: cover;
-      transform: rotate(-45deg);
-      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      transform: rotate(-45deg); //rotate the photo to original position
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); //mask in the same format of the outline
     }
 
     &__name {
