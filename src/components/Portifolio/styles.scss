@@ -13,7 +13,16 @@
     flex: 1; //fill all space available
   }
 
+  @keyframes opacityAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   .user-presentation {
+    animation: opacityAnimation .8s ease;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -21,7 +30,6 @@
     background-color: transparent;
     margin: 0 auto;
     padding: 3rem;
-
 
     //outline around the photo
     &__photo-container {
@@ -45,7 +53,12 @@
       background-repeat: no-repeat;
       background-size: cover;
       transform: rotate(-45deg); //rotate the photo to original position
-      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); //mask in the same format of the outline
+      clip-path: polygon(
+        50% 0%,
+        100% 50%,
+        50% 100%,
+        0% 50%
+      ); //mask in the same format of the outline
     }
 
     &__name {
@@ -65,20 +78,22 @@
       font-size: 1rem;
       font-weight: 100;
       overflow: hidden; /* Ensures the content is not revealed until the animation */
-      border-right: 0.10em solid #fff; /* The typwriter cursor */
+      border-right: 0.1em solid #fff; /* The typwriter cursor */
       white-space: nowrap; /* Keeps the content on a single line */
       margin: 1.2rem auto; /* Gives that scrolling effect as the typing happens */
-      letter-spacing: 0.20em; /* Adjust as needed */
+      letter-spacing: 0.2em; /* Adjust as needed */
       animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
     }
 
+
+    //TODO: media queries to change witdh
     /* The typing effect */
     @keyframes typing {
       from {
         width: 0;
       }
       to {
-        width: 45%;
+        width: 40%;
       }
     }
 
@@ -96,5 +111,9 @@
 
   .line-separation {
     margin-left: 1.2rem;
+    height: 1px;
+    color: #bebebe;
+    background-color: #bebebe;
+    border:  none;
   }
 }
