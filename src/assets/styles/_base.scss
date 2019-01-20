@@ -18,11 +18,11 @@ html {
     font-family: 'Maven Pro', sans-serif;
 
     @include respond(tab-land) {
-        font-size: 56.25%;
+        font-size: 75%;
     }
     
     @include respond(tab-port) {
-        font-size: 50%;
+        font-size: 60%;
     }
 
     @include respond(big-desktop) {
