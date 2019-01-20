@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./styles.scss";
 import UserInfoTitle from "../UserInfoTitle/loadable";
+import UserInfoText from "../UserInfoText/loadable";
 export default class Portifolio extends Component {
   render() {
     const { profile } = this.props;
@@ -18,6 +19,8 @@ export default class Portifolio extends Component {
           <hr className="line-separation" />
           <div className="user-presentation">
             <UserInfoTitle title="Profile" />
+            <UserInfoText text={profile.description}/>
+
           </div>
         </section>
         <section className="portifolio__user-history">WORK EXPERIENCE</section>
@@ -26,7 +29,7 @@ export default class Portifolio extends Component {
   }
 }
 
-Portifolio.protoTypes = {
+Portifolio.propTypes = {
   profile: PropTypes.shape({
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
