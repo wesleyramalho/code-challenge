@@ -19,8 +19,11 @@ export default class Portifolio extends Component {
           <hr className="line-separation" />
           <div className="user-presentation">
             <UserInfoTitle title="Profile" />
-            <UserInfoText text={profile.description}/>
-
+            <UserInfoText text={[profile.description]} />
+            <UserInfoTitle title="Contact" />
+            <UserInfoText text={[profile.contact.tel, profile.contact.cel]} />
+            <UserInfoText text={[profile.contact.address]} />
+            <UserInfoText text={[profile.contact.website, profile.contact.mail]} />
           </div>
         </section>
         <section className="portifolio__user-history">WORK EXPERIENCE</section>
