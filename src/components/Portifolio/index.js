@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import avatar from "../../assets/img/avatar-dev.png";
 import "./styles.scss";
+import UserInfoTitle from "../UserInfoTitle/loadable";
 export default class Portifolio extends Component {
   render() {
     const { profile } = this.props;
@@ -15,7 +15,10 @@ export default class Portifolio extends Component {
               {profile.profession}
             </h1>
           </div>
-          <hr className="line-separation"/>
+          <hr className="line-separation" />
+          <div className="user-presentation">
+            <UserInfoTitle title="Profile" />
+          </div>
         </section>
         <section className="portifolio__user-history">WORK EXPERIENCE</section>
       </div>
