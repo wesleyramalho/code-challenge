@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./styles.scss";
 import UserInfoTitle from "../UserInfoTitle/loadable";
 import UserInfoText from "../UserInfoText/loadable";
+import SkillsChart from "../SkillsChart/loadable";
 export default class Portifolio extends Component {
   render() {
     const { profile } = this.props;
@@ -24,6 +25,8 @@ export default class Portifolio extends Component {
             <UserInfoText text={[profile.contact.tel, profile.contact.cel]} />
             <UserInfoText text={[profile.contact.address]} />
             <UserInfoText text={[profile.contact.website, profile.contact.mail]} />
+            <UserInfoTitle title="Skills" />
+            <SkillsChart skills={profile.skills}/>
           </div>
         </section>
         <section className="portifolio__user-history">WORK EXPERIENCE</section>
