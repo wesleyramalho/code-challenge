@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./styles.scss";
 
 const UserInfoText = ({ text } = []) => {
@@ -10,4 +11,6 @@ const UserInfoText = ({ text } = []) => {
 };
 
 export default UserInfoText;
-//TODO: proptypes
+UserInfoText.PropTypes = {
+  text: PropTypes.array
+}
