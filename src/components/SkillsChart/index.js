@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./styles.scss";
 
 const calculateTransparentPart = (filledPart) => {
+  //removes percentage symbol and convert value to int
   const filledValue = parseInt(filledPart.slice(0,filledPart.length - 1));
   return 100 - filledValue;
 }
