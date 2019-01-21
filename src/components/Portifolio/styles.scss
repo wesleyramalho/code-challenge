@@ -1,8 +1,13 @@
+@import "../../assets/styles/mixins";
 .portifolio {
   min-height: 100vh;
   height: 100%;
   width: 100vw;
   display: flex;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
 
   &__user-info {
     background-color: #333;
@@ -15,16 +20,8 @@
     flex: 1; //fill all space available
   }
 
-  @keyframes opacityAnimation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   .user-presentation {
-    animation: opacityAnimation .8s ease;
+    animation: opacityAnimation 0.8s ease;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -88,8 +85,7 @@
       animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
     }
 
-
-    //TODO: media queries to change witdh
+    //type writer animations properties and media query
     /* The typing effect */
     @keyframes typing {
       from {
@@ -97,6 +93,37 @@
       }
       to {
         width: 40%;
+      }
+    }
+
+    @media screen and (max-width: 448px) {
+      //TODO: media queries to change witdh
+      /* The typing effect */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 33%;
+        }
+      }
+      &__profession {
+        animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+      }
+    }
+    @media screen and(min-width: 448px) and (max-width: 599px) {
+      //TODO: media queries to change witdh
+      /* The typing effect */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 20%;
+        }
+      }
+      &__profession {
+        animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
       }
     }
 
@@ -114,9 +141,18 @@
 
   .line-separation {
     margin-left: 1.2rem;
-    height:0.2rem;
+    height: 0.2rem;
     color: #fcfcfc;
     background-color: #fcfcfc;
-    border:  none;
+    border: none;
+  }
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
