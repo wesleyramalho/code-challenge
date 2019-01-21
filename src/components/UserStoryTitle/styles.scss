@@ -1,0 +1,20 @@
+.user-story-title-container {
+  width: 100%;
+  text-align: start;
+  border-bottom: 2px solid #404040;
+  border-bottom-width: 0.2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.2rem;
+
+  &__title {
+    font-size: 2rem;
+    color:#262626;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+  }
+
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
+}
