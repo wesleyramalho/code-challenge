@@ -2,13 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./styles.scss";
 
+const calculateTransparentPart = (filledPart) => {
+  const filledValue = parseInt(filledPart.slice(0,filledPart.length - 1));
+  return 100 - filledValue;
+}
 const SkillsChart = ({ skills } = []) => {
   if (!skills.length) return null;
   const skillItems = skills.map(skill => {
     return (
-      <div>
+      <div className="user-skills__skill-content">
         <h1 className="user-skills__skill-title">{skill.name}</h1>
-        <div className="user-skills__skill-chart">{skill.value} </div>
+        <div
+          className="user-skills__skill-chart"
+          style={{
+            backgroundImage: `linear-gradient(90deg, #fff 
+              ${skill.value}, transparent ${calculateTransparentPart(skill.value)}%)`
+          }}
+        />
       </div>
     );
   });

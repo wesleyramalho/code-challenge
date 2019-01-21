@@ -1,9 +1,16 @@
 .user-skills {
-  &__skill-title {
-    
+  text-align: center;
+
+  &__skill-content {
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
   }
-
+  &__skill-title {
+  }
   &__skill-chart {
-
+    border: 1px solid #fff;
+    width: 20rem;
+    height: 20px;
   }
 }
