@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/wesleyramalho/code-challenge/precache-manifest.a028de3fb8be89d654637ef183cfd8c0.js"
+  "/code-challenge/precache-manifest.52ea651d6a6301a30015175bbccf1796.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/wesleyramalho/code-challenge/index.html", {
+workbox.routing.registerNavigationRoute("/code-challenge/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
