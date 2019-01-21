@@ -5,7 +5,7 @@ import "./styles.scss";
 
 const UserStoryContent = ({ stories }) => {
   const userStories = stories.map(({ name, date, description }) => (
-    <div className="user-story-text-container__content">
+    <div key={name} className="user-story-text-container__content">
       <h1 className="user-story-text-container__content__name">{name}</h1>
       <span className="user-story-text-container__content__date">{date}</span>
       <p className="user-story-text-container__content__description">
