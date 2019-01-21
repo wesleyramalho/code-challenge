@@ -1,0 +1,29 @@
+.user-story-text-container {
+  &__content {
+    &__name {
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.12rem;
+      margin-bottom: 0.6rem;
+    }
+
+    &__date {
+      display: block;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+
+    &__description {
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+
+    &:first-child {
+      margin-top: 1rem;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 2.2rem;
+    }
+  }
+}
