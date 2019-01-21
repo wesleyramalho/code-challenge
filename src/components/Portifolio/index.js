@@ -4,7 +4,8 @@ import "./styles.scss";
 import UserInfoTitle from "../UserInfoTitle/loadable";
 import UserInfoText from "../UserInfoText/loadable";
 import SkillsChart from "../SkillsChart/loadable";
-import UserHistoryTitle from "../UserHistoryTitle/loadable";
+import UserStoryTitle from "../UserStoryTitle/loadable";
+import UserStoryContent from "../UserStoryContent/loadable";
 export default class Portifolio extends Component {
   render() {
     const { profile } = this.props;
@@ -32,8 +33,11 @@ export default class Portifolio extends Component {
             <SkillsChart skills={profile.skills} />
           </div>
         </section>
-        <section className="portifolio__user-history">
-          <UserHistoryTitle title="work experience" />
+        <section className="portifolio__user-story">
+          <UserStoryTitle title="work experience" />
+          <UserStoryContent stories={profile.experience} />
+          <UserStoryTitle title="education" />
+          <UserStoryContent stories={profile.education} />
         </section>
       </div>
     );
