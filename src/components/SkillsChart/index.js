@@ -11,7 +11,7 @@ const SkillsChart = ({ skills } = []) => {
   if (!skills.length) return null;
   const skillItems = skills.map(skill => {
     return (
-      <div className="user-skills__skill-content">
+      <div key={skill.name} className="user-skills__skill-content">
         <h1 className="user-skills__skill-title">{skill.name}</h1>
         <div
           className="user-skills__skill-chart"
@@ -27,7 +27,7 @@ const SkillsChart = ({ skills } = []) => {
 };
 
 export default SkillsChart;
-SkillsChart.PropTypes = {
+SkillsChart.propTypes = {
   skills: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
