@@ -97,7 +97,6 @@
     }
 
     @media screen and (max-width: 448px) {
-      //TODO: media queries to change witdh
       /* The typing effect */
       @keyframes typing {
         from {
@@ -108,11 +107,11 @@
         }
       }
       &__profession {
-        animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        animation: typing 1.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
       }
     }
-    @media screen and(min-width: 448px) and (max-width: 599px) {
-      //TODO: media queries to change witdh
+    @media screen and(min-width: 448px) and (max-width: 600px) {
       /* The typing effect */
       @keyframes typing {
         from {
@@ -123,7 +122,8 @@
         }
       }
       &__profession {
-        animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        animation: typing 1.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
       }
     }
 
