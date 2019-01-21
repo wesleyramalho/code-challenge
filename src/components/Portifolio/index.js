@@ -4,6 +4,7 @@ import "./styles.scss";
 import UserInfoTitle from "../UserInfoTitle/loadable";
 import UserInfoText from "../UserInfoText/loadable";
 import SkillsChart from "../SkillsChart/loadable";
+import UserHistoryTitle from "../UserHistoryTitle/loadable";
 export default class Portifolio extends Component {
   render() {
     const { profile } = this.props;
@@ -24,12 +25,16 @@ export default class Portifolio extends Component {
             <UserInfoTitle title="Contact" />
             <UserInfoText text={[profile.contact.tel, profile.contact.cel]} />
             <UserInfoText text={[profile.contact.address]} />
-            <UserInfoText text={[profile.contact.website, profile.contact.mail]} />
+            <UserInfoText
+              text={[profile.contact.website, profile.contact.mail]}
+            />
             <UserInfoTitle title="Skills" />
-            <SkillsChart skills={profile.skills}/>
+            <SkillsChart skills={profile.skills} />
           </div>
         </section>
-        <section className="portifolio__user-history">WORK EXPERIENCE</section>
+        <section className="portifolio__user-history">
+          <UserHistoryTitle title="work experience" />
+        </section>
       </div>
     );
   }
