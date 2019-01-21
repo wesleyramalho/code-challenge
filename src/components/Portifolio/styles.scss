@@ -9,7 +9,7 @@
     flex: 0 0 35%; //don't grow - don't shrink - starts with 35% of available space
   }
 
-  &__user-history {
+  &__user-story {
     padding: 75px 60px 60px 60px;
     background-color: #fff;
     flex: 1; //fill all space available
@@ -114,9 +114,9 @@
 
   .line-separation {
     margin-left: 1.2rem;
-    height: 1px;
-    color: #bebebe;
-    background-color: #bebebe;
+    height:0.2rem;
+    color: #fcfcfc;
+    background-color: #fcfcfc;
     border:  none;
   }
 }
