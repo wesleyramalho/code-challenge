@@ -1,0 +1,16 @@
+.user-history {
+  width: 100%;
+  text-align: start;
+  border-bottom: 2px solid #404040;
+  border-bottom-width: thin;
+  padding-bottom: 1rem;
+  margin-bottom: 1.2rem;
+
+  &__title {
+    font-size: 2rem;
+    color:#262626;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+  }
+}
