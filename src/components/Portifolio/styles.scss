@@ -1,4 +1,6 @@
 @import "../../assets/styles/mixins";
+@import "../../assets/styles/animations";
+
 .portifolio {
   min-height: 100vh;
   height: 100%;
@@ -39,15 +41,22 @@
       height: 200px;
       overflow: hidden;
       transform: rotate(45deg); //rotate the div with the outline
-      outline: solid;
-      outline-offset: -25px; //distance between the photo and the outline
-      outline-color: #cfcfcf;
-      outline-width: thin;
+      border: 1px solid #fcfcfc;
+      border-spacing: -30px;
+      width: 160px;
+      height: 160px;
+      // outline: solid;
+      // outline-offset: -25px; //distance between the photo and the outline
+      // outline-color: #cfcfcf;
+      // outline-width: thin;
+      animation: growOutline 5s ease infinite;
     }
     &__photo-container::before {
       content: "";
-      width: 200px;
-      height: 200px;
+      width: 210px;
+      height: 210px;
+      margin: -26px;
+
       position: absolute;
       background-image: url("../../assets/img/avatar-dev.png");
       background-repeat: no-repeat;
