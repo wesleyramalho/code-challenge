@@ -1,16 +1,21 @@
 .user-info {
   width: 60%;
   text-align: center;
-  border-bottom: 2px solid #fcfcfc;
-  border-bottom-width: 0.2rem;
   padding-bottom: 1rem;
   margin-bottom: 1.2rem;
 
   &__title {
     font-size: 1.5rem;
-    color:#fcfcfc;
+    color: #fcfcfc;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
+    &:after {
+      content: "";
+      margin-top: 1rem;
+      border-bottom: 2px solid #fcfcfc;
+      display: block;
+      animation: borderGrowFromLeft 5s linear;
+    }
   }
 
   @media screen and (min-width: 400px) and (max-width: 600px) {
