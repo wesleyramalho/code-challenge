@@ -45,11 +45,6 @@
       border-spacing: -30px;
       width: 160px;
       height: 160px;
-      // outline: solid;
-      // outline-offset: -25px; //distance between the photo and the outline
-      // outline-color: #cfcfcf;
-      // outline-width: thin;
-      animation: growOutline 5s ease infinite;
     }
     &__photo-container::before {
       content: "";
