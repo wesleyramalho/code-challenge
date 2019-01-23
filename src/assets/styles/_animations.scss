@@ -7,31 +7,3 @@
     width: 100%;
   }
 }
-
-//TODO: fix animation
-@keyframes growOutline {
-  0% {
-    border-left-width: 0;
-    border-right-width: 0;
-    border-top-width: 0;
-    border-bottom-width: 0;
-  }
-  25% {
-    border-left-width: 25%;
-    border-right-width: 100%;
-    border-top-width: 0;
-    border-bottom-width: 0;
-  }
-  50% {
-    border-left-width: 50%;
-    border-right-width: 100%;
-    border-top-width: 100%;
-    border-bottom-width: 0;
-  }
-  100% {
-    border-left-width: 100%;
-    border-right-width: 100%;
-    border-top-width: 100%;
-    border-bottom-width: 100%;
-  }
-}
