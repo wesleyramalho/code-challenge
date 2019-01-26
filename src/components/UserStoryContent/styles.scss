@@ -1,5 +1,8 @@
 .user-story-text-container {
+  
   &__content {
+    animation: opacityAnimation 0.8s ease;
+
     &__name {
       text-transform: uppercase;
       font-weight: bold;
