@@ -1,0 +1,2 @@
+.user-info{width:60%;text-align:center;padding-bottom:1rem;margin-bottom:1.2rem;-webkit-animation:opacityAnimation .8s ease;animation:opacityAnimation .8s ease}.user-info__title{font-size:1.5rem;color:#fcfcfc;text-transform:uppercase;letter-spacing:.3rem}.user-info__title:after{content:"";margin-top:1rem;border-bottom:2px solid #fcfcfc;display:block;-webkit-animation:borderGrowFromLeft 5s linear;animation:borderGrowFromLeft 5s linear}@media screen and (min-width:400px) and (max-width:600px){.user-info{width:40%}}
+/*# sourceMappingURL=2.5bbe56e3.chunk.css.map */
