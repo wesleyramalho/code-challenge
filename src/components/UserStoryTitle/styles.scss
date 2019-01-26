@@ -3,13 +3,14 @@
   text-align: start;
   padding-bottom: 1rem;
   margin-bottom: 1.2rem;
-
+  
   &__title {
     font-size: 2rem;
     color:#262626;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 0.3rem;
+    animation: opacityAnimation 0.8s ease;
 
     &:after {
       content: "";
